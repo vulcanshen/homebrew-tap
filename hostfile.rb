@@ -5,40 +5,44 @@
 class Hostfile < Formula
   desc "Cross-platform hosts file manager CLI"
   homepage "https://github.com/vulcanshen/hostfile"
-  version "1.4.1"
+  version "1.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_darwin_amd64.tar.gz"
-      sha256 "d5973553463a4da1bcdb87d743fdb13d4cbc2000fec3c1f72ed921ff6f84b734"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.2/hostfile_1.4.2_darwin_amd64.tar.gz"
+      sha256 "d4c691d43851d65bc17372b97815933a7f8da6e69a455c6cf1ccec5267f6aa59"
 
       define_method(:install) do
         bin.install "hostfile"
+        man1.install Dir["docs/man/*.1"]
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_darwin_arm64.tar.gz"
-      sha256 "dff581aea6be56b18b60ebab0512a772cc60f22d8830d5cdaa16c162b3304053"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.2/hostfile_1.4.2_darwin_arm64.tar.gz"
+      sha256 "d6f43caa100614b10fddf0569105b989cbe722254033a2419b118bd84fa001cf"
 
       define_method(:install) do
         bin.install "hostfile"
+        man1.install Dir["docs/man/*.1"]
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_linux_amd64.tar.gz"
-      sha256 "f33e26b14970ab9ab822bcee7118e5561b63bdbfaa40f28f88e597897b3333fa"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.2/hostfile_1.4.2_linux_amd64.tar.gz"
+      sha256 "a034f54400c7fb4d257f835351a7a7298b79d8b2ed3956e36b016fb009b03e38"
       define_method(:install) do
         bin.install "hostfile"
+        man1.install Dir["docs/man/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_linux_arm64.tar.gz"
-      sha256 "9e7a8079c86b3ec8cdd320297bbb26c59b97d6f9eb161803123e1fb13a7cc222"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.2/hostfile_1.4.2_linux_arm64.tar.gz"
+      sha256 "ac231069f5ffbdbde2bb48bb2c32753f09b00fac7cfea2ff9d9ac36c0db79259"
       define_method(:install) do
         bin.install "hostfile"
+        man1.install Dir["docs/man/*.1"]
       end
     end
   end
