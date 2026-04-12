@@ -5,20 +5,20 @@
 class Hostfile < Formula
   desc "Cross-platform hosts file manager CLI"
   homepage "https://github.com/vulcanshen/hostfile"
-  version "1.4.0"
+  version "1.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.0/hostfile_1.4.0_darwin_amd64.tar.gz"
-      sha256 "c64de03ddf956a90c44a215aa3f9a99bdee0eea73edd662de9a374fd8e3122ef"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_darwin_amd64.tar.gz"
+      sha256 "d5973553463a4da1bcdb87d743fdb13d4cbc2000fec3c1f72ed921ff6f84b734"
 
       define_method(:install) do
         bin.install "hostfile"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.0/hostfile_1.4.0_darwin_arm64.tar.gz"
-      sha256 "ea388775895525aaa7ef40c0fe7f6c52bc4fe8d06c5c523e04906f89370876f1"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_darwin_arm64.tar.gz"
+      sha256 "dff581aea6be56b18b60ebab0512a772cc60f22d8830d5cdaa16c162b3304053"
 
       define_method(:install) do
         bin.install "hostfile"
@@ -28,15 +28,15 @@ class Hostfile < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.0/hostfile_1.4.0_linux_amd64.tar.gz"
-      sha256 "4aa47d7c8707d1dcb4d050c0723dec8ff47cca9101b2d9e20420630e975dce65"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_linux_amd64.tar.gz"
+      sha256 "f33e26b14970ab9ab822bcee7118e5561b63bdbfaa40f28f88e597897b3333fa"
       define_method(:install) do
         bin.install "hostfile"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.0/hostfile_1.4.0_linux_arm64.tar.gz"
-      sha256 "fb6020c380fc50fa01baafefbfbd395e644cd83bda2167115e233b5fec60bbbf"
+      url "https://github.com/vulcanshen/hostfile/releases/download/v1.4.1/hostfile_1.4.1_linux_arm64.tar.gz"
+      sha256 "9e7a8079c86b3ec8cdd320297bbb26c59b97d6f9eb161803123e1fb13a7cc222"
       define_method(:install) do
         bin.install "hostfile"
       end
