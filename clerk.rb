@@ -10,7 +10,7 @@ class Clerk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vulcanshen/clerk/releases/download/v3.2.7/clerk_3.2.7_darwin_amd64.tar.gz"
-      sha256 "950bda629184a72820590dd725f8d5444ea806b587f71082c41c121f4e9b8771"
+      sha256 "f459906b9bc14d73933da5ed60c5dc40bf63d22a6c6df991746336213b61ec18"
 
       define_method(:install) do
         bin.install "clerk"
@@ -19,7 +19,7 @@ class Clerk < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vulcanshen/clerk/releases/download/v3.2.7/clerk_3.2.7_darwin_arm64.tar.gz"
-      sha256 "13205d8d405073e7ab46bbdea34632a7e80232f9d124c59a575b02c92fe63028"
+      sha256 "aa8f7dc4b09b98d02aff73d34812ef82468197f9eab6704c381567e42adb26a7"
 
       define_method(:install) do
         bin.install "clerk"
@@ -31,7 +31,7 @@ class Clerk < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vulcanshen/clerk/releases/download/v3.2.7/clerk_3.2.7_linux_amd64.tar.gz"
-      sha256 "093e5b550e88586a35e7a866fe4153e2bde930bc55c948b67e57dac9c5195a29"
+      sha256 "19a41eed06240f4ecae69d51e79e1c9ac70fca5313107110173ee3f62c356d8e"
       define_method(:install) do
         bin.install "clerk"
         man1.install Dir["docs/man/*.1"]
@@ -39,7 +39,7 @@ class Clerk < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vulcanshen/clerk/releases/download/v3.2.7/clerk_3.2.7_linux_arm64.tar.gz"
-      sha256 "2372afa096d73c4c237489057a4d4d7909a29e7e979ba78afff978a9bc3acf71"
+      sha256 "dcdae4c6d1a7789b0ae839542a5e68d8bea2bec6858e2520923066ca49e2430d"
       define_method(:install) do
         bin.install "clerk"
         man1.install Dir["docs/man/*.1"]
