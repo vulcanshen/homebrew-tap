@@ -5,12 +5,12 @@
 class Clerk < Formula
   desc "The Claude Code Clerk — auto-summarize your sessions"
   homepage "https://github.com/vulcanshen/clerk"
-  version "5.1.0"
+  version "5.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.0/clerk_5.1.0_darwin_amd64.tar.gz"
-      sha256 "e688f3c076684f563c4de3ec45b6c1d1726e8fc87a77cf99a03daaad24f9d6b3"
+      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.1/clerk_5.1.1_darwin_amd64.tar.gz"
+      sha256 "773e0a557b97f19cecd056db50114e78954ce07e9cd4563e5bb11cc9b33e277e"
 
       define_method(:install) do
         bin.install "clerk"
@@ -18,8 +18,8 @@ class Clerk < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.0/clerk_5.1.0_darwin_arm64.tar.gz"
-      sha256 "77574905ff93bd1787dd84f6ff8e0a321fe0b990afd19aac1b747a66aded86b2"
+      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.1/clerk_5.1.1_darwin_arm64.tar.gz"
+      sha256 "b0984f29da5a20d56389517c5a3b5d7e88c5e55f7088dcc6ae4045d4beaa1905"
 
       define_method(:install) do
         bin.install "clerk"
@@ -30,16 +30,16 @@ class Clerk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.0/clerk_5.1.0_linux_amd64.tar.gz"
-      sha256 "1e912a1de17186acb70f35b540f6102f73a199b02f6601b9a1a6a9ccb310b304"
+      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.1/clerk_5.1.1_linux_amd64.tar.gz"
+      sha256 "6a20f8d452477b2a48361d63f886f5a57b52f6b2b0766231b91c9a99c0317deb"
       define_method(:install) do
         bin.install "clerk"
         man1.install Dir["docs/man/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.0/clerk_5.1.0_linux_arm64.tar.gz"
-      sha256 "f0a4f20a3a89a982a62f145edd929d1c3919a84d8342c6240537b0128148e8ec"
+      url "https://github.com/vulcanshen/clerk/releases/download/v5.1.1/clerk_5.1.1_linux_arm64.tar.gz"
+      sha256 "da08e1a8fde8e88baf9a9725b0fccee9d9ecc8f920dd990dfa3af8c5e5ee0001"
       define_method(:install) do
         bin.install "clerk"
         man1.install Dir["docs/man/*.1"]
