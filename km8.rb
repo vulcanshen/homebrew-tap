@@ -5,20 +5,20 @@
 class Km8 < Formula
   desc "Kubernetes TUI management tool inspired by Lens IDE"
   homepage "https://github.com/vulcanshen/km8"
-  version "1.5.5"
+  version "1.5.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/km8/releases/download/v1.5.5/km8_1.5.5_darwin_amd64.tar.gz"
-      sha256 "964427e1fe2245daf21a910299a4894e7248feea54b95def61c8b8e8e82b60d6"
+      url "https://github.com/vulcanshen/km8/releases/download/v1.5.6/km8_1.5.6_darwin_amd64.tar.gz"
+      sha256 "51ffae38e7a3fca55190cc498109cc167ba62ca1695af7ba3397940e705fcf22"
 
       define_method(:install) do
         bin.install "km8"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/km8/releases/download/v1.5.5/km8_1.5.5_darwin_arm64.tar.gz"
-      sha256 "55bc8a094d77259adce09590beb856e5dd9ac58d9166aaa5682cc152a0bbe7b6"
+      url "https://github.com/vulcanshen/km8/releases/download/v1.5.6/km8_1.5.6_darwin_arm64.tar.gz"
+      sha256 "c63aff9e2f5d7563dfc3a083664e53e6e21d84258babeb349334773e282231b6"
 
       define_method(:install) do
         bin.install "km8"
@@ -28,15 +28,15 @@ class Km8 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/km8/releases/download/v1.5.5/km8_1.5.5_linux_amd64.tar.gz"
-      sha256 "d76c2d927db9dc7470efeb41bf78f2d097442de257b28a931b0912c948e70898"
+      url "https://github.com/vulcanshen/km8/releases/download/v1.5.6/km8_1.5.6_linux_amd64.tar.gz"
+      sha256 "8ef1242503248971b4ec21b68ff2b7747b51f881fd2fcb7a4ba5b4ae4e1a8bb5"
       define_method(:install) do
         bin.install "km8"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/km8/releases/download/v1.5.5/km8_1.5.5_linux_arm64.tar.gz"
-      sha256 "b17a2831f63543502e4e4d47bb5510ccf971cf7fbd8a66ed88e42f497a614bbc"
+      url "https://github.com/vulcanshen/km8/releases/download/v1.5.6/km8_1.5.6_linux_arm64.tar.gz"
+      sha256 "c879a3b172fb1fe7ec3973b4723a51d3c668ec7b8da2a95f1c9966034e959b01"
       define_method(:install) do
         bin.install "km8"
       end
