@@ -9,7 +9,7 @@ class Kbu < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/km8/releases/download/v2.0.0/kbu_2.0.0_darwin_amd64.tar.gz"
+      url "https://github.com/vulcanshen/kbu/releases/download/v2.0.0/kbu_2.0.0_darwin_amd64.tar.gz"
       sha256 "8bdd4e7f677d8c6a77eb3cfec9ceadd3e0f774000410f81f2c5e888474ea87f5"
 
       define_method(:install) do
@@ -17,7 +17,7 @@ class Kbu < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/km8/releases/download/v2.0.0/kbu_2.0.0_darwin_arm64.tar.gz"
+      url "https://github.com/vulcanshen/kbu/releases/download/v2.0.0/kbu_2.0.0_darwin_arm64.tar.gz"
       sha256 "c360fb48c64f1df9f1f52e538aed670ec374de04b71fd939ccb4d262960d1a50"
 
       define_method(:install) do
@@ -28,14 +28,14 @@ class Kbu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/km8/releases/download/v2.0.0/kbu_2.0.0_linux_amd64.tar.gz"
+      url "https://github.com/vulcanshen/kbu/releases/download/v2.0.0/kbu_2.0.0_linux_amd64.tar.gz"
       sha256 "6cf6efa7b2d37b17075820b45d41d5011cecf487b7aa1f7a9249dcd8305b9a91"
       define_method(:install) do
         bin.install "kbu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/km8/releases/download/v2.0.0/kbu_2.0.0_linux_arm64.tar.gz"
+      url "https://github.com/vulcanshen/kbu/releases/download/v2.0.0/kbu_2.0.0_linux_arm64.tar.gz"
       sha256 "9bf358f401885f9d204f3cc4c6e52667197ecf26e59e3f38b2e3755d457a92ee"
       define_method(:install) do
         bin.install "kbu"
