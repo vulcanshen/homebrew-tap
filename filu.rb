@@ -5,23 +5,23 @@
 class Filu < Formula
   desc "ZLC terminal file manager (kbu u-family) — content search, split preview, carry-bucket"
   homepage "https://github.com/vulcanshen/filu"
-  version "0.2.5"
+  version "0.2.6"
 
   depends_on "fd"
   depends_on "ripgrep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/filu/releases/download/v0.2.5/filu_0.2.5_darwin_amd64.tar.gz"
-      sha256 "ab6bab92de5a700863df04fc5c8bf6b64c37cff9ef6c2c69b95c2f9d8c1dd57e"
+      url "https://github.com/vulcanshen/filu/releases/download/v0.2.6/filu_0.2.6_darwin_amd64.tar.gz"
+      sha256 "ee6a6d38414cf213db48eeb36a6ce3d2a0fef605a66b6f707916910c7e1c14bb"
 
       define_method(:install) do
         bin.install "filu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/filu/releases/download/v0.2.5/filu_0.2.5_darwin_arm64.tar.gz"
-      sha256 "cb247d659324fdb81fb7599b75dbf8745ef0d4864e3a74b53426b67380283975"
+      url "https://github.com/vulcanshen/filu/releases/download/v0.2.6/filu_0.2.6_darwin_arm64.tar.gz"
+      sha256 "1482f0dc5b01fee5d9ac55b66162fe26ab558ecc58164aed63135444691b3d6e"
 
       define_method(:install) do
         bin.install "filu"
@@ -31,15 +31,15 @@ class Filu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/filu/releases/download/v0.2.5/filu_0.2.5_linux_amd64.tar.gz"
-      sha256 "fe8fedb86746952f91a618ce9828754e805bbefd9791b9da02d7d31fb6743efa"
+      url "https://github.com/vulcanshen/filu/releases/download/v0.2.6/filu_0.2.6_linux_amd64.tar.gz"
+      sha256 "6218c4d30a48d16953a14ce9a4e30ad584ffa3aa05c464bcecb8e7dc0e857c8d"
       define_method(:install) do
         bin.install "filu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/filu/releases/download/v0.2.5/filu_0.2.5_linux_arm64.tar.gz"
-      sha256 "7fdcd26bc12e213c93327d8ddda458bf85ed79f81c27f9fa201a862deae6c96f"
+      url "https://github.com/vulcanshen/filu/releases/download/v0.2.6/filu_0.2.6_linux_arm64.tar.gz"
+      sha256 "18f46b98817b10d9f25ebaaef55843b70c3d605159567d7caf4c3787115eed38"
       define_method(:install) do
         bin.install "filu"
       end
