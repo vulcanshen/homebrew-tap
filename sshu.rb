@@ -5,20 +5,20 @@
 class Sshu < Formula
   desc "ssh/sftp terminal front end (u-family) — host book, reusable credentials, two-sided transfers, a grid of live terminals"
   homepage "https://github.com/vulcanshen/sshu"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/sshu/releases/download/v1.0.0/sshu_1.0.0_darwin_amd64.tar.gz"
-      sha256 "3723cbee0dd7714259bb2c1ab4eea2e4abea2372ab2ff7985b6b3d7a5dd6c259"
+      url "https://github.com/vulcanshen/sshu/releases/download/v1.1.0/sshu_1.1.0_darwin_amd64.tar.gz"
+      sha256 "0352a1d92fb076d78fd26b82200b44a4c38cc50f536e39c7ab153f905a8afe75"
 
       define_method(:install) do
         bin.install "sshu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/sshu/releases/download/v1.0.0/sshu_1.0.0_darwin_arm64.tar.gz"
-      sha256 "5daace6c6c545721535f58af22c35d6f783d7f737ee3e864030c5527bc33419f"
+      url "https://github.com/vulcanshen/sshu/releases/download/v1.1.0/sshu_1.1.0_darwin_arm64.tar.gz"
+      sha256 "7d4fd14474561e773e6e81ef1ecb62cc096e00be9e6cf237678d6dbb673fd57c"
 
       define_method(:install) do
         bin.install "sshu"
@@ -28,15 +28,15 @@ class Sshu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/sshu/releases/download/v1.0.0/sshu_1.0.0_linux_amd64.tar.gz"
-      sha256 "9ee7bcbe288a51f5df00b0b7c52881915bad7682764328b8f8fca3f33ad2ed19"
+      url "https://github.com/vulcanshen/sshu/releases/download/v1.1.0/sshu_1.1.0_linux_amd64.tar.gz"
+      sha256 "192356f495c736292ba529b8e0b8c0c366c54426c5ddcb7b2eb39a5e5a3271d2"
       define_method(:install) do
         bin.install "sshu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/sshu/releases/download/v1.0.0/sshu_1.0.0_linux_arm64.tar.gz"
-      sha256 "ccbb45e1657e4c182e99fc85065e3561c52783bdcbcfc1b47f1448903ed1f307"
+      url "https://github.com/vulcanshen/sshu/releases/download/v1.1.0/sshu_1.1.0_linux_arm64.tar.gz"
+      sha256 "713d71a0ca6a6395c90fe98f5cf2c6fd32120c2c2614d7ed2f2871c61e80bd41"
       define_method(:install) do
         bin.install "sshu"
       end
