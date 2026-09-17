@@ -1,9 +1,10 @@
 # Adapted from the original mhaeuser/homebrew-mhaeuser cask
 # (BSD-3-Clause, Copyright (C) 2022 Marvin Häuser).
 # The upstream tap and app were archived in March 2026; this copy only
-# updates the deprecated `depends_on macos:` string-comparison syntax so the
-# cask loads without warnings on current Homebrew. Artifacts still point at
-# the original, publicly available 1.8 release.
+# updates deprecated syntax (`depends_on macos:` string comparison,
+# `uninstall_preflight` -> `uninstall_preflight_steps`) so the cask loads
+# without warnings on current Homebrew. Artifacts still point at the
+# original, publicly available 1.8 release.
 cask "battery-toolkit" do
   arch arm: "arm64"
 
@@ -24,8 +25,11 @@ cask "battery-toolkit" do
 
   app "Battery Toolkit.app"
 
-  uninstall_preflight do
-    system "sudo", "security", "authorizationdb", "remove", "me.mhaeuser.batterytoolkitd.manage"
+  uninstall_preflight_steps do
+    run "/usr/bin/security",
+        args:         ["authorizationdb", "remove", "me.mhaeuser.batterytoolkitd.manage"],
+        sudo:         true,
+        must_succeed: false
   end
 
   uninstall launchctl:  "me.mhaeuser.batterytoolkitd",
