@@ -5,20 +5,20 @@
 class Webu < Formula
   desc "terminal browser (u-family) — headless Chromium's accessibility tree, drawn as a TUI: tabs, bookmarks, history, downloads, DevTools"
   homepage "https://github.com/vulcanshen/webu"
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.2.1/webu_0.2.1_darwin_amd64.tar.gz"
-      sha256 "59de179717db14e9b75611b634b22ce2c16d896e3c37c25c7ef141efdde326d9"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.3.0/webu_0.3.0_darwin_amd64.tar.gz"
+      sha256 "22bdeb301ef14b94925a8a9b185f30d6484a87ca4853206e83624d8044382276"
 
       define_method(:install) do
         bin.install "webu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.2.1/webu_0.2.1_darwin_arm64.tar.gz"
-      sha256 "74af2d588b0843f3aa9d8e2e2df85124b018fc604b937271fe498bc1899fa0fa"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.3.0/webu_0.3.0_darwin_arm64.tar.gz"
+      sha256 "cb449fdcb4f094651ba4af274f3a03a68bdcc7f2c7f766eb32c789f997242b74"
 
       define_method(:install) do
         bin.install "webu"
@@ -28,8 +28,8 @@ class Webu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.2.1/webu_0.2.1_linux_amd64.tar.gz"
-      sha256 "23cbc29c40588790944addcdd4e21fcfe679307b405d483bc9f837c4f9967d28"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.3.0/webu_0.3.0_linux_amd64.tar.gz"
+      sha256 "39a08065ef28d61ce3698fa0b120eddaccd580b89c0b26233a560d45caf98477"
       define_method(:install) do
         bin.install "webu"
       end
