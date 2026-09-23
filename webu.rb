@@ -10,7 +10,7 @@ class Webu < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vulcanshen/webu/releases/download/v0.3.0/webu_0.3.0_darwin_amd64.tar.gz"
-      sha256 "22bdeb301ef14b94925a8a9b185f30d6484a87ca4853206e83624d8044382276"
+      sha256 "3465d122f206412ee3d91182bce6a425a032e49a0faae177c4c7b54e09fd442b"
 
       define_method(:install) do
         bin.install "webu"
@@ -18,7 +18,7 @@ class Webu < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vulcanshen/webu/releases/download/v0.3.0/webu_0.3.0_darwin_arm64.tar.gz"
-      sha256 "cb449fdcb4f094651ba4af274f3a03a68bdcc7f2c7f766eb32c789f997242b74"
+      sha256 "d2181f2e82b383c582c137b22f254203530f2e35eb301fe365b72be78079de36"
 
       define_method(:install) do
         bin.install "webu"
@@ -29,7 +29,7 @@ class Webu < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vulcanshen/webu/releases/download/v0.3.0/webu_0.3.0_linux_amd64.tar.gz"
-      sha256 "39a08065ef28d61ce3698fa0b120eddaccd580b89c0b26233a560d45caf98477"
+      sha256 "c50695ea8c2b636e244d400b7487ea83f92c8227defb209896dc237ef49a42c8"
       define_method(:install) do
         bin.install "webu"
       end
