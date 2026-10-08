@@ -5,20 +5,20 @@
 class Locku < Formula
   desc "screensaver with a PIN for the terminal (u-family) — tmux lock-command, screen LOCKPRG, or any tty: an LED-board clock, a dino run, or a program of your own; any key asks for the PIN"
   homepage "https://github.com/vulcanshen/locku"
-  version "0.2.4"
+  version "0.2.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/locku/releases/download/v0.2.4/locku_0.2.4_darwin_amd64.tar.gz"
-      sha256 "1c8e1248a57cb0870139eaad59f91b06e7baf378dd0ded6a347665beffde2a5e"
+      url "https://github.com/vulcanshen/locku/releases/download/v0.2.5/locku_0.2.5_darwin_amd64.tar.gz"
+      sha256 "b9782a9e8af4cdae0b17d2259823a06358bd2c2b173a3e95d68671ce561e11ad"
 
       define_method(:install) do
         bin.install "locku"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/locku/releases/download/v0.2.4/locku_0.2.4_darwin_arm64.tar.gz"
-      sha256 "99c9c40773e7a76c8d50ff40ab57e129da1dfccba53de1f8fc42858a02dc7b3d"
+      url "https://github.com/vulcanshen/locku/releases/download/v0.2.5/locku_0.2.5_darwin_arm64.tar.gz"
+      sha256 "2a8f38e391df3f0e4619b28d1fdc6ade51195ad1490e7124505013a20540b292"
 
       define_method(:install) do
         bin.install "locku"
@@ -28,15 +28,15 @@ class Locku < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/locku/releases/download/v0.2.4/locku_0.2.4_linux_amd64.tar.gz"
-      sha256 "0cdca35d31fb3d333033f96943a5d382e52084fb4283f2a324866a5dfa46f2e3"
+      url "https://github.com/vulcanshen/locku/releases/download/v0.2.5/locku_0.2.5_linux_amd64.tar.gz"
+      sha256 "83475ab934288a0b220c77e5c9b53c1c1e703300742dd4907731fd6a656c9851"
       define_method(:install) do
         bin.install "locku"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/locku/releases/download/v0.2.4/locku_0.2.4_linux_arm64.tar.gz"
-      sha256 "eb36483e069fe6c8dab9404bbaaa131c8e706c04451be3be9479bfcfe940a772"
+      url "https://github.com/vulcanshen/locku/releases/download/v0.2.5/locku_0.2.5_linux_arm64.tar.gz"
+      sha256 "0579bbb926e7b3680d3e8dc45141f5a71a2e5ed25c55ea92bb97d45053569681"
       define_method(:install) do
         bin.install "locku"
       end
