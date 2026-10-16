@@ -5,20 +5,20 @@
 class Ccdrawu < Formula
   desc "status drawer for Claude Code (u-family) — usage limits, context, model, cost and git beside the transcript; ccdrawu picks what it shows"
   homepage "https://github.com/vulcanshen/ccdrawu"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.2/ccdrawu_0.1.2_darwin_amd64.tar.gz"
-      sha256 "329ec7a3d9335993ec44481d7e48ba23b15e310d62f558c6e46624db949d575d"
+      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.3/ccdrawu_0.1.3_darwin_amd64.tar.gz"
+      sha256 "5ffd87e7780a9b1fb52bbfb60bce4844169953d563ee7d1438923b210496f79e"
 
       define_method(:install) do
         bin.install "ccdrawu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.2/ccdrawu_0.1.2_darwin_arm64.tar.gz"
-      sha256 "cf03f4a2b4a0bc420b3ed327c12c5201beb893e7e993deb2003df1742d39c260"
+      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.3/ccdrawu_0.1.3_darwin_arm64.tar.gz"
+      sha256 "ddc8fde42cc80d2b2c7ac66351f5d56d91a29ac9e5ab0633a8f2ded7c1b55b8c"
 
       define_method(:install) do
         bin.install "ccdrawu"
@@ -28,15 +28,15 @@ class Ccdrawu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.2/ccdrawu_0.1.2_linux_amd64.tar.gz"
-      sha256 "e747331efdc026d17dced3c5ce0ef249b66428ac47ebf251d67b917ffb5d47e0"
+      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.3/ccdrawu_0.1.3_linux_amd64.tar.gz"
+      sha256 "e075af95a617cbb362fb47f6ed2fcd0172f4d44566c86fa447cc43234cd03875"
       define_method(:install) do
         bin.install "ccdrawu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.2/ccdrawu_0.1.2_linux_arm64.tar.gz"
-      sha256 "af09604e5450fb0a85c0eb003eb4a9c46ca29078b620c6eab826ffebe9924251"
+      url "https://github.com/vulcanshen/ccdrawu/releases/download/v0.1.3/ccdrawu_0.1.3_linux_arm64.tar.gz"
+      sha256 "8b510e12f7919474b63a5c362493c56dc44e8d77b038fe7bff560b61acf17071"
       define_method(:install) do
         bin.install "ccdrawu"
       end
