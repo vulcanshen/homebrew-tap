@@ -5,20 +5,20 @@
 class Kamonu < Formula
   desc "Draw the mark of a terminu family app, letter by letter, in the terminal (terminu family)"
   homepage "https://github.com/vulcanshen/kamonu"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.0/kamonu_1.0.0_darwin_amd64.tar.gz"
-      sha256 "b63ac0c09ab287e0dae6dc66bc1e2099718e48a1e654b3aa3c88f4ff66222443"
+      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.1/kamonu_1.0.1_darwin_amd64.tar.gz"
+      sha256 "6748e3ea28f407b6de65435b729272f8eeb8f2c5ca0c254ed155d52103652671"
 
       define_method(:install) do
         bin.install "kamonu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.0/kamonu_1.0.0_darwin_arm64.tar.gz"
-      sha256 "c16f1b783cfd39182c491be7c9ea39386f3eb7fbc55cb5c725dc7e0b7596c50a"
+      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.1/kamonu_1.0.1_darwin_arm64.tar.gz"
+      sha256 "0b0e46657d287ff9a6a8af9626cf2ffe823ecca3225612b51e711b1f4945cf4b"
 
       define_method(:install) do
         bin.install "kamonu"
@@ -28,15 +28,15 @@ class Kamonu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.0/kamonu_1.0.0_linux_amd64.tar.gz"
-      sha256 "6cc6774dbc96a03eddc6ff00bf33097ef4fc8b0bf2959ef79425d281ac3ddfdb"
+      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.1/kamonu_1.0.1_linux_amd64.tar.gz"
+      sha256 "6854b8033fb4ca4f66487e99dc7dee7f7d52eae6d7831059a946a7de0b85e661"
       define_method(:install) do
         bin.install "kamonu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.0/kamonu_1.0.0_linux_arm64.tar.gz"
-      sha256 "8588436ea57da1607f61ab51715e642c5f2da2d70410665bb856dbd36bc43be5"
+      url "https://github.com/vulcanshen/kamonu/releases/download/v1.0.1/kamonu_1.0.1_linux_arm64.tar.gz"
+      sha256 "57786b0b7d80f4ed239a8acd69b37a0538e8aeab65a4da394025e09e82cadbfe"
       define_method(:install) do
         bin.install "kamonu"
       end
