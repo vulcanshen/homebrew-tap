@@ -5,20 +5,20 @@
 class Hostu < Formula
   desc "hostu: switch the hosts file between profiles (terminu family)"
   homepage "https://github.com/vulcanshen/hostu"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.1/hostu_1.0.1_darwin_amd64.tar.gz"
-      sha256 "4ab275727fc2a130de796b814c2c16e932eebcb3d436d5e25bd420762ee16ad7"
+      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.2/hostu_1.0.2_darwin_amd64.tar.gz"
+      sha256 "50d36ad84057df903d2fa5defb25f93852c1e0898b267bb0f79fbe9fd0a07701"
 
       define_method(:install) do
         bin.install "hostu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.1/hostu_1.0.1_darwin_arm64.tar.gz"
-      sha256 "41a83406c7f8639662880861e32fd32c9a539aa22e89d1ba027715616f1a842d"
+      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.2/hostu_1.0.2_darwin_arm64.tar.gz"
+      sha256 "e5313e13ef0a87799d980b19a332326b04190b9ea66d1a839751ccc3beb038d6"
 
       define_method(:install) do
         bin.install "hostu"
@@ -28,15 +28,15 @@ class Hostu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.1/hostu_1.0.1_linux_amd64.tar.gz"
-      sha256 "2e2d86094c16b1774bafaae9b5d20d787d61945c92ccd1d3e5a42547425bc63e"
+      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.2/hostu_1.0.2_linux_amd64.tar.gz"
+      sha256 "923b2e173666a0551b251b6e5f1a1441cf025535575de23a6799dca77684cd6b"
       define_method(:install) do
         bin.install "hostu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.1/hostu_1.0.1_linux_arm64.tar.gz"
-      sha256 "a6c183fd4816235cc546516173ec201dbda5b86edf729202e5803a597853e1c6"
+      url "https://github.com/vulcanshen/hostu/releases/download/v1.0.2/hostu_1.0.2_linux_arm64.tar.gz"
+      sha256 "bb29e9aded9335138138ffdf84b46689d13eb5415188b7220f6160494eebeef3"
       define_method(:install) do
         bin.install "hostu"
       end
