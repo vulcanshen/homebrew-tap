@@ -5,20 +5,20 @@
 class Webu < Formula
   desc "webu: a terminal browser that reads a web page as a document (terminu family)"
   homepage "https://github.com/vulcanshen/webu"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.6.0/webu_0.6.0_darwin_amd64.tar.gz"
-      sha256 "157b617e9346b38bf7b2c3531323bbf9115102465837e23c475a4074422d2e6b"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.7.0/webu_0.7.0_darwin_amd64.tar.gz"
+      sha256 "00a814c759cb20e83774e0f89c449af0b1c4bd1e689fa063ee560b6870c0a98b"
 
       define_method(:install) do
         bin.install "webu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.6.0/webu_0.6.0_darwin_arm64.tar.gz"
-      sha256 "103037625a0a5225ae04748cde82acdd845421625c2328b8b772e9d57620859a"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.7.0/webu_0.7.0_darwin_arm64.tar.gz"
+      sha256 "aed056820f6040bbe6c3ff639d28104262f5e95ca3ef92aab3b4210e84903d2c"
 
       define_method(:install) do
         bin.install "webu"
@@ -28,15 +28,15 @@ class Webu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.6.0/webu_0.6.0_linux_amd64.tar.gz"
-      sha256 "61c51c6f3d337781aac1641b8246d9cd29c1be93717c11b27e06bd2c674e2574"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.7.0/webu_0.7.0_linux_amd64.tar.gz"
+      sha256 "a55bb0c1610f560bbea2f6832e259a2d05e2198c5ed0c11faa2530a8bae4dcb0"
       define_method(:install) do
         bin.install "webu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/webu/releases/download/v0.6.0/webu_0.6.0_linux_arm64.tar.gz"
-      sha256 "6c004381c0739ce5cf4fec972120cf224211f80aa5c2ad0d30634eb30efe0502"
+      url "https://github.com/vulcanshen/webu/releases/download/v0.7.0/webu_0.7.0_linux_arm64.tar.gz"
+      sha256 "4ee3a5de9e8adb5202f39ef661d88265271d0aee7a8cbb5400db3774c33ef547"
       define_method(:install) do
         bin.install "webu"
       end
