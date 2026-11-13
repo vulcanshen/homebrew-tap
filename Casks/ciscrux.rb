@@ -1,6 +1,6 @@
 cask "ciscrux" do
-  version "1.0.2"
-  sha256 "12352b3228f43e8bd19ac68cc2def533294520478fc5ea7d4137f79b9c71047f"
+  version "1.1.0"
+  sha256 "fbeb9464d0575360071d36366840eefcd85e49b79cbc0b340179c5156d792646"
 
   url "https://github.com/vulcanshen/ciscrux/releases/download/v#{version}/Ciscrux.zip"
   name "Ciscrux"
