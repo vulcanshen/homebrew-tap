@@ -5,20 +5,20 @@
 class Tetru < Formula
   desc "tetru: a falling-block game for the terminal (terminu family)"
   homepage "https://github.com/vulcanshen/tetru"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.1/tetru_0.3.1_darwin_amd64.tar.gz"
-      sha256 "3f93a8e0d84bf594d683385f7724541b62d3dc914ce4bcc5be81a4e6ee0010ca"
+      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.2/tetru_0.3.2_darwin_amd64.tar.gz"
+      sha256 "89b177c7f0e88a4772886e6bcd3b65cece4799bf43f1e2369af18bf868f1da25"
 
       define_method(:install) do
         bin.install "tetru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.1/tetru_0.3.1_darwin_arm64.tar.gz"
-      sha256 "72a2155a41cf309a4dee534f790d8eb5570f33bd90866cd9445b12c05fcfa0c1"
+      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.2/tetru_0.3.2_darwin_arm64.tar.gz"
+      sha256 "2c600dfed53be5561fe632e367867fd8ad54c7fc7b0c36de79d75a84999eaab8"
 
       define_method(:install) do
         bin.install "tetru"
@@ -28,15 +28,15 @@ class Tetru < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.1/tetru_0.3.1_linux_amd64.tar.gz"
-      sha256 "acbb2b87172b1bee112466b99927d6928c5c861b0e6b71110f54ba2e8e939d92"
+      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.2/tetru_0.3.2_linux_amd64.tar.gz"
+      sha256 "9c08da80a0417d8abb2e080b872c1358931ce7016fcaef6f87b26bb04a253a85"
       define_method(:install) do
         bin.install "tetru"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.1/tetru_0.3.1_linux_arm64.tar.gz"
-      sha256 "0c91f7ebd6c7e8a3b02cad466e5d7af5c2732c3fc020525600ce2d41763411a6"
+      url "https://github.com/vulcanshen/tetru/releases/download/v0.3.2/tetru_0.3.2_linux_arm64.tar.gz"
+      sha256 "a4cea871b1cc2b7d776fff5bc96336dca22bd9a99d7ae2027ed774db6b133f8b"
       define_method(:install) do
         bin.install "tetru"
       end
