@@ -5,20 +5,20 @@
 class Catu < Formula
   desc "catu: a file viewer for the terminal, Markdown and mermaid diagrams drawn (terminu family)"
   homepage "https://github.com/vulcanshen/catu"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/catu/releases/download/v1.0.0/catu_1.0.0_darwin_amd64.tar.gz"
-      sha256 "5ca91deca44a32cdb200d97fcbe142ff5f9a4bf2bba10213a892ec27f29d5c65"
+      url "https://github.com/vulcanshen/catu/releases/download/v1.1.0/catu_1.1.0_darwin_amd64.tar.gz"
+      sha256 "1b644fec13cf3fa40adbd2886332c40ba09f1735ac9673a3f57f6927a072a465"
 
       define_method(:install) do
         bin.install "catu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/catu/releases/download/v1.0.0/catu_1.0.0_darwin_arm64.tar.gz"
-      sha256 "2de846dca32e1aab343dd9572b76ebfc2ac0c03d4d72fd1659460fb812bddc80"
+      url "https://github.com/vulcanshen/catu/releases/download/v1.1.0/catu_1.1.0_darwin_arm64.tar.gz"
+      sha256 "5b680f6eb9e1c33a13af1ab6b96dc8d8fc20cefbbc6dd6233c7055c13ba9e088"
 
       define_method(:install) do
         bin.install "catu"
@@ -28,15 +28,15 @@ class Catu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/catu/releases/download/v1.0.0/catu_1.0.0_linux_amd64.tar.gz"
-      sha256 "f512077a7d4124d0a4838d5ca290c951e9449ccd9a458d171a3539e758cf6bc4"
+      url "https://github.com/vulcanshen/catu/releases/download/v1.1.0/catu_1.1.0_linux_amd64.tar.gz"
+      sha256 "7149bbd898ef754020edd6b7b8f8bc67d6b9049992e5b4feba1dcaed5294cb1e"
       define_method(:install) do
         bin.install "catu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/catu/releases/download/v1.0.0/catu_1.0.0_linux_arm64.tar.gz"
-      sha256 "4f791a0d39940c8343c378cb0ad9ff4e18e6bb8d7aefdf92fd88ef2d979bf6e2"
+      url "https://github.com/vulcanshen/catu/releases/download/v1.1.0/catu_1.1.0_linux_arm64.tar.gz"
+      sha256 "43001a1e2d63329e7466dbe9bcd259914f7325f11fc7b635e45ac04d9a457e4b"
       define_method(:install) do
         bin.install "catu"
       end
