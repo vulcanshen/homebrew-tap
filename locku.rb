@@ -5,20 +5,20 @@
 class Locku < Formula
   desc "locku: a screensaver with a PIN for the terminal — tmux lock-command, screen LOCKPRG, or any tty (terminu family)"
   homepage "https://github.com/vulcanshen/locku"
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/locku/releases/download/v1.0.2/locku_1.0.2_darwin_amd64.tar.gz"
-      sha256 "b0e763b4f6f0d601b6d4dbddfdf09c00ae9a3fee3aa8c1f012f2f833be1c4dc3"
+      url "https://github.com/vulcanshen/locku/releases/download/v1.0.3/locku_1.0.3_darwin_amd64.tar.gz"
+      sha256 "207038791fc8e05a67c753b5d8d380fdca51e3c0d3986b696463f63a64bbbd2d"
 
       define_method(:install) do
         bin.install "locku"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/locku/releases/download/v1.0.2/locku_1.0.2_darwin_arm64.tar.gz"
-      sha256 "6022e7784d5ea08fe9d550389a18556f58c61600f2876437d053b39bec0a9670"
+      url "https://github.com/vulcanshen/locku/releases/download/v1.0.3/locku_1.0.3_darwin_arm64.tar.gz"
+      sha256 "9a42afe84456b4e296dca91fdba89c80c4c69d4a108dbf1a81465831f1cdd305"
 
       define_method(:install) do
         bin.install "locku"
@@ -28,15 +28,15 @@ class Locku < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/locku/releases/download/v1.0.2/locku_1.0.2_linux_amd64.tar.gz"
-      sha256 "2088f71f26cb4130fb2557c607718d9e3fec74eda485f329010ed08abdff62be"
+      url "https://github.com/vulcanshen/locku/releases/download/v1.0.3/locku_1.0.3_linux_amd64.tar.gz"
+      sha256 "b22b98acfce93e35b292b91d894676c1096955e29868fcdef72262c4453fbf94"
       define_method(:install) do
         bin.install "locku"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/locku/releases/download/v1.0.2/locku_1.0.2_linux_arm64.tar.gz"
-      sha256 "dd7f332f8a721db8090d8a78a6023896c11729b649fa3c6240164652bbc3dcaf"
+      url "https://github.com/vulcanshen/locku/releases/download/v1.0.3/locku_1.0.3_linux_arm64.tar.gz"
+      sha256 "c80ab427d6a9466b2b58b4f0f2db508fb377b165d30038f61ab42f13d6d1b9f6"
       define_method(:install) do
         bin.install "locku"
       end
