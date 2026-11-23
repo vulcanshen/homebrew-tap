@@ -5,20 +5,20 @@
 class Kbu < Formula
   desc "kbu: a Kubernetes TUI inspired by Lens IDE (terminu family)"
   homepage "https://github.com/vulcanshen/kbu"
-  version "4.1.1"
+  version "4.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.1/kbu_4.1.1_darwin_amd64.tar.gz"
-      sha256 "34458c3f708800a2061030f2bca03953042fb8b045548777ca446c523b51d1fd"
+      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.2/kbu_4.1.2_darwin_amd64.tar.gz"
+      sha256 "ece1ac66d6b8af029a23e693ddab7a3685514bec625110905e854d8e91d93ba6"
 
       define_method(:install) do
         bin.install "kbu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.1/kbu_4.1.1_darwin_arm64.tar.gz"
-      sha256 "5cfc18c279e422888ae0efe921b052d116d38bde5e4b23e11e18e30e88cade5b"
+      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.2/kbu_4.1.2_darwin_arm64.tar.gz"
+      sha256 "e4a69acee337108c172af726ae022e9725bd3a7c1c8922e02f23a77bf6c996d0"
 
       define_method(:install) do
         bin.install "kbu"
@@ -28,15 +28,15 @@ class Kbu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.1/kbu_4.1.1_linux_amd64.tar.gz"
-      sha256 "a65405eb84bff4ce7e70c19ccff63335f385d9b2b60da5239c1a9517e0286468"
+      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.2/kbu_4.1.2_linux_amd64.tar.gz"
+      sha256 "ffd8bd090a5e99dd6c719200f6ea4390ea7bb22af4e8a615e009a96afb47681f"
       define_method(:install) do
         bin.install "kbu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.1/kbu_4.1.1_linux_arm64.tar.gz"
-      sha256 "d8ac38f0033b9712ac2be9a38dea825885296f70cdb13fb6860cf27bfe693927"
+      url "https://github.com/vulcanshen/kbu/releases/download/v4.1.2/kbu_4.1.2_linux_arm64.tar.gz"
+      sha256 "1742e02afa1b56dbc9873e0d97c64e6a0ff4a88efc731757081c020c315206c8"
       define_method(:install) do
         bin.install "kbu"
       end
