@@ -5,20 +5,20 @@
 class Gittu < Formula
   desc "gittu: a git client for the terminal (terminu family)"
   homepage "https://github.com/vulcanshen/gittu"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.0/gittu_0.1.0_darwin_amd64.tar.gz"
-      sha256 "4410cbea547ce1023ba22a8866510c5b0c835a8ee8efed89c9d3f65479315efa"
+      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.1/gittu_0.1.1_darwin_amd64.tar.gz"
+      sha256 "20018302521d95f4f53d7b285fc6236a876f4be524cdd078d7e0c4ed160959d2"
 
       define_method(:install) do
         bin.install "gittu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.0/gittu_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f3180ae3e81fc1236604feebf7a215ff67457c8b430ac5d4ed2d94260ba6f3e0"
+      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.1/gittu_0.1.1_darwin_arm64.tar.gz"
+      sha256 "1c20b1954ecafea51c5d6b8b738be2bad03efd77d3891e1ace829142f6f5d9ac"
 
       define_method(:install) do
         bin.install "gittu"
@@ -28,15 +28,15 @@ class Gittu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.0/gittu_0.1.0_linux_amd64.tar.gz"
-      sha256 "2a080e7a3c2dc145d1d11f5a98ba8968753cf6b359f2fa27741fa632f1ff1ef1"
+      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.1/gittu_0.1.1_linux_amd64.tar.gz"
+      sha256 "0eb208dfe5357370ce4c7744eb2548c4efc5193821f685359be1e296bf0b8912"
       define_method(:install) do
         bin.install "gittu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.0/gittu_0.1.0_linux_arm64.tar.gz"
-      sha256 "66099f2d591dd457763abd9b12375cdd51731ed1f72fa9a3c23b7ddc97583349"
+      url "https://github.com/vulcanshen/gittu/releases/download/v0.1.1/gittu_0.1.1_linux_arm64.tar.gz"
+      sha256 "3e5594138b5fe1f14f7ec22e85e23b8561f4cf2b34a246b9bc3fb27e318d7c66"
       define_method(:install) do
         bin.install "gittu"
       end
@@ -47,10 +47,11 @@ class Gittu < Formula
     <<~EOS
       Run `gittu` in a git repository to start, or `gittu <path>`.
       It runs the git you have installed. It keeps one setting in
-      ~/.config/gittu/config.yaml, and nothing else.
+      ~/.config/gittu/config.yaml, and the width of the left in
+      ~/.config/gittu/state.yaml.
 
       A Nerd Font terminal profile and a truecolor (24-bit) terminal are
-      required. macOS and Linux (WSL too).
+      required. macOS, Linux (WSL too) and Windows.
     EOS
   end
 
