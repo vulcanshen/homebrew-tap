@@ -5,20 +5,20 @@
 class Boxu < Formula
   desc "boxu: every container runtime in one TUI (terminu family)"
   homepage "https://github.com/vulcanshen/boxu"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vulcanshen/boxu/releases/download/v0.1.0/boxu_0.1.0_darwin_amd64.tar.gz"
-      sha256 "cfc689d08474bf107858976336d89272312adae21cf35bd5392ca1e02566ee13"
+      url "https://github.com/vulcanshen/boxu/releases/download/v0.2.0/boxu_0.2.0_darwin_amd64.tar.gz"
+      sha256 "94424548f4436e14e8aba041d8ca12e4da282f6ee9141770a948cb3784c5ec1b"
 
       define_method(:install) do
         bin.install "boxu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vulcanshen/boxu/releases/download/v0.1.0/boxu_0.1.0_darwin_arm64.tar.gz"
-      sha256 "7eda71a9019f10d0bc40a4682abaf464054d5b013af32f5fcea5be2ebfcbc7dc"
+      url "https://github.com/vulcanshen/boxu/releases/download/v0.2.0/boxu_0.2.0_darwin_arm64.tar.gz"
+      sha256 "71477514466089808bcedf2816a0abcc7a4e2e457ee861252d228639c8018a31"
 
       define_method(:install) do
         bin.install "boxu"
@@ -28,15 +28,15 @@ class Boxu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/boxu/releases/download/v0.1.0/boxu_0.1.0_linux_amd64.tar.gz"
-      sha256 "2b31f944d5727f2a4d934570b355643f02f71e686c33f999d534a49ed11fd377"
+      url "https://github.com/vulcanshen/boxu/releases/download/v0.2.0/boxu_0.2.0_linux_amd64.tar.gz"
+      sha256 "2d3f37985d9c4a8d2c81e5ba233d349dc0d569c7e152ef89e9fa124da97f89d8"
       define_method(:install) do
         bin.install "boxu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vulcanshen/boxu/releases/download/v0.1.0/boxu_0.1.0_linux_arm64.tar.gz"
-      sha256 "33e8d360d620e8200d1e55dbeb7cb23f1bb48986e74b6272640ae7ef46f108d9"
+      url "https://github.com/vulcanshen/boxu/releases/download/v0.2.0/boxu_0.2.0_linux_arm64.tar.gz"
+      sha256 "6cde66fb4b4116e7d9c43abc56c934ed688188fcd9572b59e3c46cdd89c17a28"
       define_method(:install) do
         bin.install "boxu"
       end
